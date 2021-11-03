@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    button{
+     
+        font-size: 1.5rem;
+        border-radius: 50%;
+        box-shadow: 10px 10px rgba(57,57,57,.5);
+        margin: 5rem;
+        height: 15rem;
+     
+    }
+    .textColor{
+        font-size: 2rem;
+        flex-wrap: nowrap;
+    }
+</style>
+<body>
+    <div class="textColor"></div>
+    <button  id="renkDegistir">Change COLOR</button>
+    <script>
+var renkBtn= document.getElementById("renkDegistir");
+var textColor = document.querySelector(".textColor");
+// renkBtn.onclick=()=>{
+    renkBtn.onclick = function()
+    {
+    var renk1=Math.round(Math.random()*255);
+    var renk2=Math.round(Math.random()*255);
+    var renk3=Math.round(Math.random()*255);
+    var renk4=Math.round(Math.random()*255);
+    var renk5=Math.round(Math.random()*255);
+    var renk6=Math.round(Math.random()*255);
+    var renk7=Math.round(Math.random()*255);
+    var renk8=Math.round(Math.random()*255);
+    var renk9=Math.round(Math.random()*255);
+    document.body.style.background=`linear-gradient(rgba(${renk1},${renk2},${renk3} ),rgba(${renk4},${renk5},${renk6} ), rgba(${renk7},${renk8},${renk9} ))`;
+    renkBtn.style.background=`linear-gradient(rgba(${renk3},${renk2},${renk1} ),rgba(${renk6},${renk7},${renk4} ), rgba(${renk5},${renk2},${renk4} ))`;
+    textColor.innerHTML = `Background:rgba(${renk1},${renk2},${renk3} ),rgba(${renk4},${renk5},${renk6} ), rgba(${renk7},${renk8},${renk9} )`
+    }
+    </script>
+</body>
+</html>
